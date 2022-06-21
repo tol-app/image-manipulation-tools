@@ -5,10 +5,11 @@ from os import listdir
 from os.path import isfile, join
 from pathlib import Path
 import argparse
+import numpy
 
 # Argument parsing variable declared
 ap = argparse.ArgumentParser()
- 
+
 ap.add_argument("-i", "--image",
                 required=True,
                 help="Path to folder")
@@ -16,7 +17,7 @@ ap.add_argument("-i", "--image",
 args = vars(ap.parse_args())
  
 # Find all the images in the provided images folder
-mypath = args["D:\TOL"]
+mypath = args["image"]
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 images = numpy.empty(len(onlyfiles), dtype=object)
  
