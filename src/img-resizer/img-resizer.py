@@ -1,7 +1,6 @@
 import numpy as np
 import cv2
 import os
-from matplotlib import pyplot as plt
 
 inputFolder  = os.path.join(os.getcwd(), 'dataset', 'dataset-original')
 outputFolder = os.path.join(os.getcwd(), 'dataset', 'dataset-resized')
