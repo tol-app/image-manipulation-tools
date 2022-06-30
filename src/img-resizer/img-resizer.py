@@ -16,6 +16,3 @@ for filename in os.listdir(inputFolder):
         cv2.imwrite(os.path.join(outputFolder, filename), img_res)
     else:
         continue
-
-#debug string
-print(cv2.__version__)
