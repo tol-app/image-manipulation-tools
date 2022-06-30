@@ -1,7 +1,6 @@
 import numpy as np
 import cv2
 import os
-from matplotlib import pyplot as plt
 
 inputFolder  = os.path.join(os.getcwd(), 'dataset', 'dataset-original')
 outputFolder = os.path.join(os.getcwd(), 'dataset', 'dataset-resized')
@@ -17,6 +16,3 @@ for filename in os.listdir(inputFolder):
         cv2.imwrite(os.path.join(outputFolder, filename), img_res)
     else:
         continue
-
-#debug string
-print(cv2.__version__)
